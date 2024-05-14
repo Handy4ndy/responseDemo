@@ -7,7 +7,7 @@ This is a simple demonstration of a backend application using Node.js and Expres
 ### 1. Clone the repository to your local machine:
 
    ```
-   git clone https://github.com/your-username/backend-demo.git
+   [git clone [https://github.com/Handy4ndy/responseDemo.git]
    ```
 
 ### 2. Navigate to the project directory:
