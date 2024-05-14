@@ -1,3 +1,4 @@
+function fetchServerMessage() {
 // Fetch the JSON response from the server and display it
 fetch('/server/message')
   .then(response => response.json())
@@ -6,6 +7,9 @@ fetch('/server/message')
   })
   .catch(error => console.error('Error:', error));
 
+}
+
+function fetchBackendMessage() {
 // Fetch the JSON response from the backend and display it
 fetch('/script/message')
   .then(response => response.json())
@@ -14,6 +18,9 @@ fetch('/script/message')
   })
   .catch(error => console.error('Error:', error));
 
+}
+
+function fetchObfuscationMessage() {
 // Fetch the obfuscated JSON response and display it
 fetch('/obfuscation/message')
   .then(response => response.text()) // Receive response as text
@@ -25,8 +32,9 @@ fetch('/obfuscation/message')
     document.getElementById('obfuscationmessage').innerText = jsonData.message;
   })
   .catch(error => console.error('Error:', error));
+}
 
-
+function fetchCipherMessage() {
 // Fetch the encrypted JSON response and display the decrypted message
 fetch('/cipher/message')
   .then(response => response.json()) // Receive response as JSON
@@ -58,6 +66,9 @@ function caesarCipherDecrypt(text, shift) {
   return result;
 }
 
+}
+
+function fetchCombinedMessage() {
 // Fetch the encrypted JSON response and display the decrypted message
 fetch('/combined-cipher/message')
   .then(response => response.text()) // Receive response as text
@@ -103,3 +114,19 @@ function decryptCombinedCipher(encryptedData) {
 function reverseData(data) {
   return data.split('').reverse().join('');
 }
+
+}
+
+// Attach click event listeners to refresh buttons
+document.getElementById('refresh-server').addEventListener('click', fetchServerMessage);
+document.getElementById('refresh-backend').addEventListener('click', fetchBackendMessage);
+document.getElementById('refresh-obfuscation').addEventListener('click', fetchObfuscationMessage);
+document.getElementById('refresh-cipher').addEventListener('click', fetchCipherMessage);
+document.getElementById('refresh-combined').addEventListener('click', fetchCombinedMessage);
+
+// Initial fetch of all responses
+fetchServerMessage();
+fetchBackendMessage();
+fetchObfuscationMessage();
+fetchCipherMessage();
+fetchCombinedMessage();
