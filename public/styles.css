@@ -1,0 +1,17 @@
+#network-monitor-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Adjust width as needed */
+    height: 100%;
+    background-color: #f0f0f0;
+    border-left: 1px solid #ccc;
+    display: none; /* Initially hide the network monitor */
+  }
+  
+  #network-monitor {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 40px); /* Adjust height minus button height and padding */
+  }
+  
