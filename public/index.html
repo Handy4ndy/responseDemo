@@ -4,36 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Response Demo</title>
 </head>
 
 <body>
-  <h1>Response Demo</h1>
 
-  <h2>Json response</h2>
+  <main>
+    <h1>Response Demo</h1>
 
-  <p id="servermessage"></p>
-  <button id="refresh-server">Refresh</button>
+    <div class="section">
+      <h2>Network Monitor</h2>
+      <div id="network-monitor"></div>
+    </div>
 
-  <h2>Backend response</h2>
-  <p id="backendmessage"></p>
-  <button id="refresh-backend">Refresh</button>
+    <div class="section-group">
 
-  <h2>Obfuscation response</h2>
-  <p id="obfuscationmessage"></p>
-  <button id="refresh-obfuscation">Refresh</button>
+    <div class="section">
+      <h2>Json response</h2>
+      <p id="servermessage"></p>
+      <button id="refresh-server">Refresh</button>
+    </div>
 
-  <h2>Cipher response</h2>
-  <p id="ciphermessage"></p>
-  <button id="refresh-cipher">Refresh</button>
+    <div class="section">
+      <h2>Backend response</h2>
+      <p id="backendmessage"></p>
+      <button id="refresh-backend">Refresh</button>
+    </div>
 
-  <h2>Combined response</h2>
-  <p id="combinedmessage"></p>
-  <button id="refresh-combined">Refresh</button>
+    <div class="section">
+      <h2>Obfuscation response</h2>
+      <p id="obfuscationmessage"></p>
+      <button id="refresh-obfuscation">Refresh</button>
+    </div>
 
+    <div class="section">
+      <h2>Cipher response</h2>
+      <p id="ciphermessage"></p>
+      <button id="refresh-cipher">Refresh</button>
+    </div>
+
+    <div class="section">
+      <h2>Combined response</h2>
+      <p id="combinedmessage"></p>
+      <button id="refresh-combined">Refresh</button>
+    </div>
+
+  </div>
+
+  </main>
 
 
   <script src="script.js"></script>
+  <script src="networkmonitor.js"></script>
+
 </body>
 
 </html>
