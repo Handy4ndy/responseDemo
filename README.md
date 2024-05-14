@@ -37,11 +37,10 @@ This is a simple demonstration of a backend application using Node.js and Expres
 
 ## Branches
 
-Development is in progress across multiple branches:
+Development is in progress across branches:
 
-      feature/refresh-response - Refresh the GET Request.
-      feature/network-monitor - Adding a network monitor.
       bugfix/combined-encryption - Resolving issue decyphering response.
+      bugfix/obfuscation-data-error - Resolving issue SyntaxError:JSON.parse
 
 ## Issues
 
