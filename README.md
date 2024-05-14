@@ -13,7 +13,7 @@ This is a simple demonstration of a backend application using Node.js and Expres
 ### 2. Navigate to the project directory:
 
    ```
-   cd backend-demo
+   cd responseDemo
    ```
 ### 3. Install the dependencies:
 
