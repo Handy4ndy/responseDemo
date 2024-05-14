@@ -35,6 +35,18 @@ This is a simple demonstration of a backend application using Node.js and Expres
           /obfuscation/message: Returns an obfuscated JSON response.
           /cipher/message: Returns an encrypted JSON response using a Caesar cipher.
 
+## Branches
+
+Development is in progress across multiple branches:
+
+      feature/refresh-response - Refresh the GET Request.
+      feature/network-monitor - Adding a network monitor.
+      bugfix/combined-encryption - Resolving issue decyphering response.
+
+## Issues
+
+This is an experimental repo that may contain multiple issues at any one time, we are currently working on the UI and the combined encryption logic.
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or create a pull request.
@@ -43,7 +55,6 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 This project is licensed under the MIT License.
 
-You can customize this README to better suit your project, adding any additional sections or information you think is necessary. Once you're happy with it, save it as `README.md` in the root directory of your repository.
 
 ## Owner
 
