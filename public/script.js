@@ -20,18 +20,25 @@ fetch('/script/message')
 
 }
 
+// Function to fetch and display obfuscated response
 function fetchObfuscationMessage() {
-// Fetch the obfuscated JSON response and display it
-fetch('/obfuscation/message')
-  .then(response => response.text()) // Receive response as text
-  .then(data => {
-    // Reverse the obfuscation
-    const originalData = data.split('').reverse().join('');
-    const jsonData = JSON.parse(originalData);
-    // Display the message
-    document.getElementById('obfuscationmessage').innerText = jsonData.message;
-  })
-  .catch(error => console.error('Error:', error));
+  fetch('/obfuscation/message')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error fetching data - ' + response.statusText);
+      }
+      return response.text();
+    })
+    .then(data => {
+      try {
+        const originalData = data.split('').reverse().join('');
+        const jsonData = JSON.parse(originalData);
+        document.getElementById('obfuscationmessage').innerText = jsonData.message;
+      } catch (error) {
+        document.getElementById('network-monitor').innerHTML += `<p>Obfuscation Message: ${error.message}</p>`;
+      }
+    })
+    .catch(error => console.error('Error:', error));
 }
 
 function fetchCipherMessage() {
